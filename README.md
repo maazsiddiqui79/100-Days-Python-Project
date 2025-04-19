@@ -38,7 +38,7 @@ Throughout the bootcamp, I’ll be updating this repository with mini-projects a
 
 - 📧 Email: siddiqui.maaz79@gmail.com
 - 🌐 GitHub: [https://github.com/marksiddiqui](https://github.com/maazsiddiqui79)
-- 🐦 Twitter: [@MarkSiddiqui](https://twitter.com/MarkSiddiqui) *(optional)*
+
 
 ---
 
