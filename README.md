@@ -63,7 +63,7 @@ I'm based in **Mecca** and working daily to improve my skills by building real-w
 
 - 📧 Email: siddiqui.maaz79@gmail.com
 - 🌐 GitHub: [github.com/maaziddiqui](https://github.com/maazsiddiqui79)
-- 💼 Linkedin: [linkedin.com/siddiqui-maazzz](www.linkedin.com/in/siddiqui-maazzz)
+- 💼 Linkedin: [www.linkedin.com/in/siddiqui-maazzz](www.linkedin.com/in/siddiqui-maazzz)
 
 
 
