@@ -1,8 +1,7 @@
-# 🐍 Mark Siddiqui - 100 Days of Python Bootcamp
+# 🐍 Maaz Siddiqui - 100 Days of Python Bootcamp
 
 Welcome! I'm **Mark Siddiqui**, a Python developer currently on a journey to master Python through the [100 Days of Code: The Complete Python Pro Bootcamp for 2023](https://www.udemy.com/course/100-days-of-code/) by **Dr. Angela Yu** on **Udemy**.
 
-I'm based in **Mecca** and working daily to improve my skills by building real-world Python projects.
 
 ---
 
@@ -10,7 +9,6 @@ I'm based in **Mecca** and working daily to improve my skills by building real-w
 
 - 📘 **Course:** 100 Days of Code - The Complete Python Pro Bootcamp
 - 🧠 **Instructor:** Dr. Angela Yu
-- 📍 **Location:** Mecca
 - 💻 **Language:** Python 3
 - ⏳ **Duration:** 100 Days
 - 🗓️ **Status:** In Progress ✅
@@ -22,7 +20,7 @@ I'm based in **Mecca** and working daily to improve my skills by building real-w
 ###### Throughout the bootcamp, I’ll be updating this repository with mini-projects and challenges, ranging from beginner to intermediate level. Here's a preview
 
 
-| Day  | Project / Topic                         | Description                                                |
+| Day  | Project / Topic                          | Description                                                |
 |------|------------------------------------------|------------------------------------------------------------|
 | 1    | Band Name Generator                      | Learn basic input/output and string manipulation           |
 | 2    | Tip Calculator                           | Build a calculator using variables and math operations     |
@@ -63,7 +61,7 @@ I'm based in **Mecca** and working daily to improve my skills by building real-w
 
 - 📧 Email: siddiqui.maaz79@gmail.com
 - 🌐 GitHub: [github.com/maaziddiqui](https://github.com/maazsiddiqui79)
-- 💼 Linkedin: [www.linkedin.com/in/siddiqui-maazzz](www.linkedin.com/in/siddiqui-maazzz)
+- 💼 Linkedin: www.linkedin.com/in/siddiqui-maazzz
 
 
 
