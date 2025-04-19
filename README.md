@@ -19,7 +19,7 @@ I'm based in **Mecca** and working daily to improve my skills by building real-w
 
 ## 🚀 Projects I've Built
 
-#####Throughout the bootcamp, I’ll be updating this repository with mini-projects and challenges, ranging from beginner to intermediate level. Here's a preview
+###### Throughout the bootcamp, I’ll be updating this repository with mini-projects and challenges, ranging from beginner to intermediate level. Here's a preview
 
 
 | Day  | Project / Topic                         | Description                                                |
