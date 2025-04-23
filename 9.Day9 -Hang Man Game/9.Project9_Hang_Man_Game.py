@@ -102,6 +102,8 @@ while not game_over:
     display = ""  # Variable to store the word with guessed letters
     user_ip = str(input("Enter a letter: ").lower())  # Taking user input in lowercase
 
+    if user_ip in corrected:
+        print(f"YOU ALREADY GUESSED '{user_ip}' ")
     # Loop through each letter in the randomly chosen word
     for i in random_wrd:
         if i == user_ip:  # If the guessed letter is correct
@@ -114,11 +116,9 @@ while not game_over:
             corrected += "_"
 
     # If the guessed letter is NOT in the word
-    if user_ip in corrected:
-        print(f"\tYOU ALREADY GUESSED '{user_ip}' ")
     if user_ip not in random_wrd:
         life -= 1  # Reduce life count
-        print(f"\tYOU GUESSED '{user_ip}' WHICH IS NOT IN THE WORD, YOU LOSE A LIFE -1!")
+        print(f"YOU GUESSED '{user_ip}' WHICH IS NOT IN THE WORD, YOU LOSE A LIFE -1!")
         print(stages[a])  # Display current Hangman stage
         a += 1  # Move to the next stage
         
@@ -131,6 +131,7 @@ while not game_over:
 
     # Display the updated word with correct guesses
     print("\tWord to guess:", display)
+    
     print(f"{life}/7 LIVES LEFT".center(94, "*"))  # Show remaining lives
 
     # If the player guesses all letters, they win

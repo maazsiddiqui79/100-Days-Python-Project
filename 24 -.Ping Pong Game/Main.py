@@ -19,8 +19,8 @@ t.hideturtle()
 t.color("gray20")
 t.shapesize(stretch_wid=0.2, stretch_len=2)
 t.shape("square")
-t.setheading(270)  # Pointing down
-t.forward(300)     # Move to starting point
+t.setheading(270) 
+t.forward(300)    
 t.setheading(90) 
 t.pendown()
 
@@ -48,8 +48,8 @@ scr.onkeypress(fun=R_Paddle.move_down,key="Down")
 
 ball = Class_Ball()
 
-L_scr_brd =Class_Score_Boeard(-160,220)
-R_scr_brd =Class_Score_Boeard(160,220)
+L_scr_brd =Class_Score_Board(-160,220)
+R_scr_brd =Class_Score_Board(160,220)
 
 
 while True:
