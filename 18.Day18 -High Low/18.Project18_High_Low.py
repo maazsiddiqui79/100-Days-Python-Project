@@ -47,7 +47,7 @@ follower_count = {
     "Kylie Jenner": 30,
     "LeBron James": 150,
     "Mark Zuckerberg": 5,
-    "Lionel Messi": 500,  # Another high-followed person
+    "Lionel Messi": 500,  
     "Taylor Swift": 50,
     "Justin Bieber": 290,
     "Rihanna": 20,
