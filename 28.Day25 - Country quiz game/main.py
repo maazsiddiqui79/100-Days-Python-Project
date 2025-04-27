@@ -13,9 +13,7 @@ scr.addshape(map_image)
 turtle.shape(map_image)
 
 data = pd.read_csv(r"\M..A..A..Z\New Learning\Project\100-Days-Python-Project\28.Day25 - Country quiz game\50_states.csv")
-all_states = []
-for i in data["state"]:
-    all_states.append(i.lower())
+all_states = [i.lower() for i in data["state"]]
     
 print(all_states) #
 guessed_state =0
