@@ -23,7 +23,8 @@ timer=None
 
 def reset():
     global timer
-    win.after_cancel(timer)
+    if timer is not None:
+        win.after_cancel(timer)
     timer_text.config(text="TIMER")  
     canvas.itemconfig(countdown_text,text="00:00") 
 
