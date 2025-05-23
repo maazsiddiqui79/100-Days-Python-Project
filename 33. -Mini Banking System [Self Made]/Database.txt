@@ -1,0 +1,59 @@
+| Deposit: [500] | Time:18 - 19 - 17 | Date:23 - 05 - 2025 |
+| Deposit: [1599] | Time:18 - 19 - 24 | Date:23 - 05 - 2025 |
+| Deposit: [410] | Time:18 - 19 - 27 | Date:23 - 05 - 2025 |
+| Checked Balance: [2509.0] | Time:18 - 19 - 43 | Date:23 - 05 - 2025 |
+| Checked Balance: [2509.0] | Time:18 - 19 - 44 | Date:23 - 05 - 2025 |
+| Deposit: [987654] | Time:18 - 19 - 46 | Date:23 - 05 - 2025 |
+| Withdraw: [234567] | Time:18 - 19 - 54 | Date:23 - 05 - 2025 |
+| Deposit: [100] | Time:18 - 20 - 01 | Date:23 - 05 - 2025 |
+| Checked Balance: [755696.0] | Time:18 - 20 - 03 | Date:23 - 05 - 2025 |
+| Deposit: [222] | Time:18 - 23 - 54 | Date:23 - 05 - 2025 |
+| Deposit: [22] | Time:18 - 25 - 36 | Date:23 - 05 - 2025 |
+| Checked Balance: [0.0] | Time:18 - 26 - 24 | Date:23 - 05 - 2025 |
+| Deposit: [100000000] | Time:18 - 26 - 35 | Date:23 - 05 - 2025 |
+| Withdraw: [332] | Time:18 - 26 - 38 | Date:23 - 05 - 2025 |
+| Deposit: [1] | Time:18 - 26 - 58 | Date:23 - 05 - 2025 |
+| Deposit: [1234567876543234567] | Time:18 - 27 - 36 | Date:23 - 05 - 2025 |
+| Withdraw: [76543] | Time:18 - 27 - 42 | Date:23 - 05 - 2025 |
+| Checked Balance: [1.234567876543158e+18] | Time:18 - 27 - 49 | Date:23 - 05 - 2025 |
+| Deposit: [23456] | Time:18 - 30 - 29 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.123456] | Time:18 - 31 - 03 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.234] | Time:18 - 36 - 01 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000000] | Time:18 - 42 - 09 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000000] | Time:18 - 42 - 27 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.345] | Time:18 - 42 - 46 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000345] | Time:18 - 42 - 49 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.3456] | Time:18 - 43 - 00 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.9996889] | Time:18 - 43 - 08 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.12] | Time:18 - 43 - 58 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.2] | Time:18 - 44 - 04 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000010] | Time:18 - 44 - 07 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000010] | Time:18 - 44 - 10 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000010] | Time:18 - 44 - 10 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000010] | Time:18 - 44 - 11 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.2] | Time:18 - 44 - 12 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.2] | Time:18 - 44 - 14 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.2] | Time:18 - 44 - 15 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.2] | Time:18 - 44 - 17 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.2] | Time:18 - 44 - 18 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.9999] | Time:18 - 44 - 20 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10009999] | Time:18 - 44 - 27 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000000] | Time:18 - 44 - 46 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.9999] | Time:18 - 44 - 48 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.999] | Time:18 - 44 - 52 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.10000000] | Time:18 - 46 - 20 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.987] | Time:18 - 46 - 21 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.654345] | Time:18 - 46 - 24 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.6543] | Time:18 - 46 - 27 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.6543] | Time:18 - 46 - 29 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.87654] | Time:18 - 46 - 35 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.9245000] | Time:18 - 46 - 50 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.11123] | Time:18 - 51 - 03 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.98765432098765432098765] | Time:18 - 51 - 15 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.98765432098765432110790] | Time:18 - 51 - 24 | Date:23 - 05 - 2025 |
+| Withdraw: [Rs.2345678] | Time:18 - 51 - 27 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.22] | Time:18 - 53 - 42 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.98765432098765429765134] | Time:18 - 53 - 50 | Date:23 - 05 - 2025 |
+| Deposit: [Rs.1] | Time:18 - 53 - 53 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.98765432098765429765135] | Time:18 - 53 - 56 | Date:23 - 05 - 2025 |
+| Checked Balance: [Rs.98765432098765429765135] | Time:18 - 57 - 35 | Date:23 - 05 - 2025 |
