@@ -3,6 +3,8 @@
 import datetime
 from os import system
 from colorama import init, Fore, Back, Style
+import pandas as pd
+from transaction_filter  import FILTER_TRANSACTION
 init(autoreset=True)
 Balance = 0
 password =12345
@@ -10,8 +12,15 @@ password =12345
 
 # GLobal Variable 
 with open("Balance.txt","r") as f :
-    
     Balance = int(f.read())
+    
+def save_balance():
+    with open("Balance.txt","w") as f :
+            f.write(str(Balance))
+            
+def authentication():
+    return int(input("Enter Password:"))
+
 
 
 
@@ -22,8 +31,8 @@ class Deposit():
         
         now = datetime.datetime.now()
         date =now.strftime("%d - %m - %Y")
-        time =now.strftime("%H - %M - %S")
-        self.pass_ip = int(input("Enter Password:"))
+        time =now.strftime("%I:%M:%S:%p")
+        self.pass_ip = authentication()
          
         if  self.pass_ip == password:
             
@@ -38,11 +47,12 @@ class Deposit():
                 print(Fore.LIGHTRED_EX+Back.BLACK+"❌ Amount must be greater than zero.")
             else:
                 Balance += self.deposit_ip
+                save_balance()
                 print(Fore.GREEN+Back.BLACK+f"✅ Deposited ₹{self.deposit_ip} successfully.")
                 init()
                     
-                with open("Database.txt","a") as f:
-                    f.write(f"| Deposit: [Rs.{self.deposit_ip}] | Time:{time} | Date:{date} |\n")
+                with open("Database.csv","a") as f:
+                    f.write(f"| Deposit |,{self.deposit_ip},| {time} |,| {date} |\n")
         else:
             print("Incorrect password")
         
@@ -54,8 +64,8 @@ class Withdraw():
         
         now = datetime.datetime.now()
         date =now.strftime("%d - %m - %Y")
-        time =now.strftime("%H - %M - %S")
-        self.pass_ip = int(input("Enter Password:"))
+        time =now.strftime("%I:%M:%S:%p")
+        self.pass_ip = authentication()
          
         if  self.pass_ip == password:
             
@@ -72,10 +82,11 @@ class Withdraw():
                 print(Fore.LIGHTRED_EX+Back.BLACK+"❌ Insufficient funds.")           
             else:            
                 Balance -= self.withdraw_ip
+                save_balance()
                 print(Fore.RED+Back.BLACK+f"✅ Withdrawn ₹{self.withdraw_ip} successfully.")
                 
-                with open("Database.txt","a") as f:
-                    f.write(f"| Withdraw: [Rs.{self.withdraw_ip}] | Time:{time} | Date:{date} |\n")
+                with open("Database.csv","a") as f:
+                    f.write(f"| Withdraw |,{self.withdraw_ip},| {time} |,| {date} |\n")
         else:
             print("Incorrect password")
             
@@ -88,14 +99,14 @@ class Check_Balance():
         
         now = datetime.datetime.now()
         date =now.strftime("%d - %m - %Y")
-        time =now.strftime("%H - %M - %S")
+        time =now.strftime("%I:%M:%S:%p")
         
-        self.pass_ip = int(input("Enter Password:"))
+        self.pass_ip = authentication()
          
         if  self.pass_ip == password:
             print(Fore.CYAN+Back.BLACK+f"💰 Current Balance: ₹{Balance}")
-            with open("Database.txt","a") as f:
-                f.write(f"| Checked Balance: [Rs.{Balance}] | Time:{time} | Date:{date} |\n")   
+            with open("Database.csv","a") as f:
+                f.write(f"| Checked Balance |,{Balance},| {time} |,| {date} |\n")
         else:
             print("Incorrect password")
         
@@ -105,12 +116,10 @@ class Transaction_History():
     def __init__(self):
         global Balance
         
-        self.pass_ip = int(input("Enter Password:"))
+        self.pass_ip = authentication()
          
         if  self.pass_ip == password:
-            with open("Database.txt","r")as f:
-                d = f.read()
-                print(Fore.YELLOW+Back.BLACK+d)
+            f =FILTER_TRANSACTION()
         else:
             print("Incorrect password")
     
@@ -121,12 +130,12 @@ class Exit():
         system("cls")
         print("\nThank you for using Mini Banking App. Have a great day!\n")
         
+        save_balance()
         now = datetime.datetime.now()
         
         print("Date",now.date())
         print("Time",now.time())
-        with open("Balance.txt","w") as f :
-            f.write(str(Balance))
+        
         exit()
 
 
@@ -160,18 +169,27 @@ while bank_open:
         print(Fore.RED+Back.BLACK+"    Enter a valid Input    ")
         
     if user_ip == 1:
+        system("cls")
         depo = Deposit()
         
         
     elif user_ip == 2:
+        system("cls")
         withdrw = Withdraw()
         
     elif user_ip == 3:
+        system("cls")
         chk_bal = Check_Balance()
         
     elif user_ip == 4:
+        system("cls")
         hist = Transaction_History()
         
     elif user_ip == 5:
+        system("cls")
         Ext =Exit()
+        bank_close
+        
+        
+        
         
