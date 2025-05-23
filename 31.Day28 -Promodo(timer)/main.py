@@ -36,12 +36,13 @@ def start ():
     task = user_work_choice.get()
     time = int (user_time_choice.get())
     
+    # to avoid multiple timer on clicking start button 
     if timer is not None:
         win.after_cancel(timer)
         timer = None
 
     
-    
+    # giving a limit of timer cant set more than this
     if time >=100:
         timer_text.config(text="Exceed the limit 😔....")
         return
@@ -65,9 +66,11 @@ def start ():
 
 def count_down(count):
     global timer
+    # Calculating the min and sec
     count_min = math.floor(count/60)
     count_sec = math.floor(count%60)
     
+    # Conditions if the number displays in one digit.
     if count_sec <10:
         count_sec = f"0{count_sec}"
         
@@ -81,8 +84,10 @@ def count_down(count):
     if count_min == 0:
         count_min = "00"
     
+    # updates the count down
     canvas.itemconfig(countdown_text,text = f"{count_min}:{count_sec}")
     
+    # main logic using recursion
     if count > 0:
         timer = win.after(1000,count_down,count-1)
     elif count <=10:
