@@ -16,7 +16,8 @@ class FILTER_TRANSACTION():
 2.Deposits Transaction
 3.Withdraw Transaction
 4.Check Balance Transaction
-5.Summary of Transaction\n""")
+5.Summary of Transaction
+6.Export Excel DataSheet of Transaction \n""")
         
         
        
@@ -45,6 +46,8 @@ class FILTER_TRANSACTION():
             print(f"Total Withdrawals: ₹{total_withdraw}")
             print(f"Net Balance      : ₹{net_bal}")
             print("-----------------------------")
+        elif transaction_ip == 6:
+            data.to_csv("Transaction History.csv",index=False)
             
             
             
