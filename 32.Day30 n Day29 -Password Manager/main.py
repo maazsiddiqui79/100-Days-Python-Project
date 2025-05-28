@@ -136,7 +136,7 @@ def search_func ():
         dailog_box =messagebox.showinfo(title="Access Details",message="No Email/Username and PassWord exists to this Website")
     else:
         m =f"Saved Credentials\n\nWebsite: {search_data}\nEmail: {email_data_retrive}\nPassword: {password_data_retrive}"
-        dailog_box =messagebox.showinfo(title="Access Details",message=m)
+        dailog_box =messagebox.showinfo(title=f"Details for {search_data}",message=m)
     
     
     
