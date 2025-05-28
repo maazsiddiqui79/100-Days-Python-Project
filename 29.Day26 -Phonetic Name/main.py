@@ -10,9 +10,6 @@ data = pandas.read_csv(r"M:\M..A..A..Z\New Learning\Daily Codes\26. Day26\NATO-a
 
     
 
-#TODO 1. Create a dictionary in this format:
-{"A": "Alfa", "B": "Bravo"}
-
 csv_dict ={row.letter:row.code for index,row in data.iterrows()}
 # print(csv_dict)
 
@@ -29,16 +26,29 @@ while True:
             
     elif user_ip_1 == 2:
         user_ip = input("✍️ Enter Your Name: ")
+        
         wrds = [i for i in user_ip]
-        print("🔠 Letters:", wrds)
+        try:
+            symbols = [
+                '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/',
+                ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~']
+            for x in symbols:
+                if x in user_ip:
+                    raise KeyError("Sorry,Your Word Contain Symbol Which dont have Phonetic Word")
+            
+        except KeyError as k:
+            print("ERROR: ",k)
+        else:
+            print("🔠 Letters:", wrds)
 
-        phonetic = [v for i in wrds for k, v in csv_dict.items() if i.lower() == k.lower()]
+            phonetic = [v for i in wrds for k, v in csv_dict.items() if i.lower() == k.lower()]
 
-        print(f"\n🎯 Phonetic Code Word of {user_ip.upper()}:")
-        n = 0
-        for i in phonetic:
-            print(f"{wrds[n]} --> {i}")
-            n += 1
+            print(f"\n🎯 Phonetic Code Word of {user_ip.upper()}:")
+            n = 0
+            for i in phonetic:
+                print(f"{wrds[n]} --> {i}")
+                n += 1
+            
     else:
         print("👋 Bye!")
         exit()

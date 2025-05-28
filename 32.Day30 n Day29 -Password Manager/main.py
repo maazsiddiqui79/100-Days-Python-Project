@@ -3,6 +3,9 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import pyperclip
+import json
+import pandas as pd
+
 
 # 🎨 Main Background
 BACKGROUND = "#F5ECD5"    # Light Cream / Ivory
@@ -72,6 +75,13 @@ def save_data_file ():
     email_data = email_entry.get()
     password_data = password_entry.get()
     
+    new_data={
+        website_data :{
+            "Email":email_data,
+            "Password":password_data
+        }
+    }
+    
     if len(website_data)== 0 or len(password_data)== 0:
         if len(website_data)== 0 and len(password_data)>0:
             messagebox.showerror(message="Website Not Entered")
@@ -84,11 +94,56 @@ def save_data_file ():
         is_okay = messagebox.askokcancel(title="Details",message=f"You Entered :\n\nWebsite: {website_data}\nEmail/Username: {email_data}\nPassword: {password_data}")
 
         if is_okay :
-
-            with open("Password Data.txt","a") as f:
-                f.write(f"| \"{website_data}\" | \"{email_data}\" | \"{password_data}\" |\n")
+            try:
+                with open("Password Data.json","r") as f:
+                    # reading old data
+                    data =json.load(f)
+                    # update the data 
+            except FileNotFoundError:
+                with open("Password Data.json","w") as f:
+                    json.dump(new_data,f,indent=5)
+                    
+            else:
+                data.update(new_data)    
+                with open("Password Data.json","w") as f:
+                    # write the new data
+                    json.dump(data,f,indent=5)
+            finally:    
                 web_entry.delete(0,END)
                 password_entry.delete(0,END)
+                
+                
+
+
+# ---------------------------- SEARCH FUNCTIONALITY -------------------------------- #
+
+def search_func ():
+    search_data = web_entry.get()
+    # print(search_data)
+    try:
+        access_data = pd.read_json("Password Data.json")
+    except FileNotFoundError:
+        file = open("Password Data.json","w")
+    except ValueError:
+        file = open("Password Data.json","w")
+        json.dump({},file)
+            
+    try:
+        print(access_data[search_data])
+        email_data_retrive=access_data[search_data]["Email"]
+        password_data_retrive=access_data[search_data]["Password"]
+    except KeyError:
+        dailog_box =messagebox.showinfo(title="Access Details",message="No Email/Username and PassWord exists to this Website")
+    else:
+        m =f"Saved Credentials\n\nWebsite: {search_data}\nEmail: {email_data_retrive}\nPassword: {password_data_retrive}"
+        dailog_box =messagebox.showinfo(title="Access Details",message=m)
+    
+    
+    
+        
+
+# ---------------------------------------------------------------------------------- #
+
         
         
         
@@ -114,7 +169,13 @@ web_label=Label(text="Website :",font=("comic san ma",15,"bold"),bg=BACKGROUND)
 web_label.grid(column=0,row=1,pady=5)
 web_entry =Entry(width=45,font=("comic san ma",15,"bold"))
 web_entry.focus()
-web_entry.grid(column=1,row=1,columnspan=3,pady=5)
+web_entry.grid(column=1,row=1,columnspan=2,padx=5)
+# Search functionality 
+search_btn = Button(text="Search",font=("comic san ma",15,"bold"),width=15,relief="groove",command=search_func)
+search_btn.grid(column=3,row=1,pady=5)
+search_btn.bind("<Enter>",lambda e: search_btn.config(bg=apricot_orange,fg="white"))
+search_btn.bind("<Leave>",lambda e: search_btn.config(bg="white",fg=apricot_orange))
+
 
 
 # label and entry of email
