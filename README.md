@@ -41,5 +41,5 @@ Throughout the bootcamp, I’ll be updating this repository with mini-projects a
 
 ---
 
-> “Code every day. Learn every day. Grow every day.” – Mark Siddiqui
+> “Code every day. Learn every day. Grow every day.” – Maaz Siddiqui
 
