@@ -10,7 +10,6 @@ I'm based in **Mecca** and working daily to improve my skills by building real-w
 
 - 📘 **Course:** 100 Days of Code - The Complete Python Pro Bootcamp
 - 🧠 **Instructor:** Dr. Angela Yu
-- 📍 **Location:** Mecca
 - 💻 **Language:** Python 3
 - ⏳ **Duration:** 100 Days
 - 🗓️ **Status:** In Progress ✅
