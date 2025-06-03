@@ -19,7 +19,7 @@ print(all_states) #
 guessed_state =0
 
 while True:
-    ans = scr.textinput(prompt="Enter a State Name:",title=f"Guessed State:{guessed_state/50}").lower()
+    ans = scr.textinput(prompt="Enter a State Name:",title=f"Guessed State:{guessed_state/50}").lower() # type: ignore
 
     if ans.lower() in all_states:
         guessed_state += 1

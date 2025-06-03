@@ -27,7 +27,7 @@ while True:
     elif user_ip_1 == 2:
         user_ip = input("✍️ Enter Your Name: ")
         
-        wrds = [i for i in user_ip]
+        wrds = list(user_ip)
         try:
             symbols = [
                 '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/',

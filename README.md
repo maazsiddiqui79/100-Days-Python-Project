@@ -20,46 +20,46 @@ Throughout the bootcamp, I’ll be updating this repository with mini-projects a
 
 
 
-| #  | Folder Name                                 | Project Title                 | Type        |
-| -- | ------------------------------------------- | ----------------------------- | ----------- |
-| 1  | 01.Day1 -Band Name Generator                | Band Name Generator           | Day Project |
-| 2  | 02.Day2 -Tip Calculator                     | Tip Calculator                | Day Project |
-| 3  | 03.Day3 -Pizza Order                        | Pizza Order Project           | Day Project |
-| 4  | 04.Day4 -Treasure Hunter                    | Treasure Hunter Game          | Day Project |
-| 5  | 05.Day5 -Password Generator                 | Password Generator            | Day Project |
-| 6  | 06.Day6 -Rock Paper Generator               | Rock Paper Scissors Game      | Day Project |
-| 7  | 07. -Password Generator 2 \[Self Made]      | Custom Password Generator     | Self Made   |
-| 8  | 08. -MultiPlication Table \[Self Made]      | Multiplication Table          | Self Made   |
-| 9  | 09.Day9 -Hang Man Game                      | Hangman                       | Day Project |
-| 10 | 10.Day10 -Encryption n Decryption           | Encryption / Decryption App   | Day Project |
-| 11 | 11. -Number To Word Converter \[self Made]  | Number to Words Converter     | Self Made   |
-| 12 | 12.Day12 -Online Bidding Platform           | Auction Bidding Platform      | Day Project |
-| 13 | 13.Day13 -Calculator                        | Calculator                    | Day Project |
-| 14 | 14.Day16 -Dice                              | Dice Roller                   | Day Project |
-| 15 | 17.Day17 -Number Guessing                   | Number Guessing Game          | Day Project |
-| 16 | 18.Day18 -High Low                          | High-Low Comparison Game      | Day Project |
-| 17 | 19.Day19 -Quiz                              | Quiz Game                     | Day Project |
-| 18 | 20. -To Do \[self Made]                     | To-Do Task Manager            | Self Made   |
-| 19 | 21.Day21 -Hirst Art                         | Hirst Dot Painting            | Day Project |
-| 20 | 22.Day22 -Turtule race                      | Turtle Race Game              | Day Project |
-| 21 | 23. -Sanke Game                             | Snake Game                    | Self Made   |
-| 22 | 24 -.Ping Pong Game                         | Ping Pong Game                | Self Made   |
-| 23 | 25. -To Do Using Priority \[self made]      | To-Do List with Priority      | Self Made   |
-| 24 | 26. -To Do Using FIle \[self made]          | File-Based To-Do              | Self Made   |
-| 25 | 27.Day23 -Turtle Crossing Start             | Turtle Crossing Game          | Day Project |
-| 26 | 28.Day25 - Country quiz game                | US States / Country Quiz      | Day Project |
-| 27 | 29.Day26 -Phonetic Name                     | NATO Alphabet Encoder         | Day Project |
-| 28 | 30.Day27 -Unit Converter                    | Unit Converter Tool           | Day Project |
-| 29 | 31.Day28 -Promodo(timer)                    | Pomodoro Timer                | Day Project |
-| 30 | 32.Day30 n Day29 -Password Manager          | Password Manager GUI          | Day Project |
-| 31 | 33. -Mini Banking System \[Self Made]       | Mini CLI Banking System       | Self Made   |
-| 32 | 34. -Calculator \[self made]                | Additional Calculator Version | Self Made   |
-| 33 | 35. -Slot Machine \[self made]              | CLI Slot Machine Game         | Self Made   |
-| 34 | 36.Day31 -Flash card                        | Language Flash Card           | Day Project |
-| 35 | 37.Day32 -Automated Birthday Wisher on Mail | Birthday Email Automation     | Day Project |
-| 36 | 38.Day34 -Quiz Application using API        | Quiz App Using External API   | Day Project |
-| 37 | 39. -Password Strength Meter \[self made]   | Password Strength Checker     | Self Made   |
-| 38 | 40.Day35 -Weather Forecast Update on SMS    | Weather Updates via SMS       | Day Project |
+| #  | Folder Name                                 | Project Title                 | Type         |
+| -- | ------------------------------------------- | ----------------------------- | -----------  |
+| 1  | 01.Day1 -Band Name Generator                | Band Name Generator           | Day Project  |
+| 2  | 02.Day2 -Tip Calculator                     | Tip Calculator                | Day Project  |
+| 3  | 03.Day3 -Pizza Order                        | Pizza Order Project           | Day Project  |
+| 4  | 04.Day4 -Treasure Hunter                    | Treasure Hunter Game          | Day Project  |
+| 5  | 05.Day5 -Password Generator                 | Password Generator            | Day Project  |
+| 6  | 06.Day6 -Rock Paper Generator               | Rock Paper Scissors Game      | Day Project  |
+| 7  | 07. -Password Generator 2 \[Self Made]      | Custom Password Generator     | Self Made    |
+| 8  | 08. -MultiPlication Table \[Self Made]      | Multiplication Table          | Self Made    |
+| 9  | 09.Day9 -Hang Man Game                      | Hangman                       | Day Project  |
+| 10 | 10.Day10 -Encryption n Decryption           | Encryption / Decryption App   | Day Project  |
+| 11 | 11. -Number To Word Converter \[self Made]  | Number to Words Converter     | Self Made    |
+| 12 | 12.Day12 -Online Bidding Platform           | Auction Bidding Platform      | Day Project  |
+| 13 | 13.Day13 -Calculator                        | Calculator                    | Day Project  |
+| 14 | 14.Day16 -Dice                              | Dice Roller                   | Day Project  |
+| 15 | 17.Day17 -Number Guessing                   | Number Guessing Game          | Day Project  |
+| 16 | 18.Day18 -High Low                          | High-Low Comparison Game      | Day Project  |
+| 17 | 19.Day19 -Quiz                              | Quiz Game                     | Day Project  |
+| 18 | 20. -To Do \[self Made]                     | To-Do Task Manager            | Self Made    |
+| 19 | 21.Day21 -Hirst Art                         | Hirst Dot Painting            | Day Project  |
+| 20 | 22.Day22 -Turtule race                      | Turtle Race Game              | Day Project  |
+| 21 | 23. -Sanke Game                             | Snake Game                    | Self Made    |
+| 22 | 24 -.Ping Pong Game                         | Ping Pong Game                | Self Made    |
+| 23 | 25. -To Do Using Priority \[self made]      | To-Do List with Priority      | Self Made    |
+| 24 | 26. -To Do Using FIle \[self made]          | File-Based To-Do              | Self Made    |
+| 25 | 27.Day23 -Turtle Crossing Start             | Turtle Crossing Game          | Day Project  |
+| 26 | 28.Day25 - Country quiz game                | US States / Country Quiz      | Day Project  |
+| 27 | 29.Day26 -Phonetic Name                     | NATO Alphabet Encoder         | Day Project  |
+| 28 | 30.Day27 -Unit Converter                    | Unit Converter Tool           | Day Project  |
+| 29 | 31.Day28 -Promodo(timer)                    | Pomodoro Timer                | Day Project  |
+| 30 | 32.Day30 n Day29 -Password Manager          | Password Manager GUI          | Day Project  |
+| 31 | 33. -Mini Banking System \[Self Made]       | Mini CLI Banking System       | Self Made    |
+| 32 | 34. -Calculator \[self made]                | Additional Calculator Version | Self Made    |
+| 33 | 35. -Slot Machine \[self made]              | CLI Slot Machine Game         | Self Made    |
+| 34 | 36.Day31 -Flash card                        | Language Flash Card           | Day Project  |
+| 35 | 37.Day32 -Automated Birthday Wisher on Mail | Birthday Email Automation     | Day Project  |
+| 36 | 38.Day34 -Quiz Application using API        | Quiz App Using External API   | Day Project  |
+| 37 | 39. -Password Strength Meter \[self made]   | Password Strength Checker     | Self Made    |
+| 38 | 40.Day35 -Weather Forecast Update on SMS    | Weather Updates via SMS       | Day Project  |
 
 
 

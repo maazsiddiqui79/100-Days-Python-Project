@@ -17,6 +17,7 @@ def view_task ():
         
         if not readline:
             print("NO TASK IS THERE")
+            return
             
         for i,t in enumerate(readline,start=1):
             print(f"{i} - {t}")
@@ -27,13 +28,14 @@ def view_task ():
 def remove_task ():
     system("cls")
     with open ("DATA_BASE.txt","r") as f:
-        print("Type '$' to go back\n")
         
         readline = f.readlines()
         
         if not readline:
             print("NO TASK IS THERE")
+            return
             
+        print("Type '$' to go back\n")
         for i,t in enumerate(readline,start=1):
             print(f"{i} - {t}")
         User_del = input("Enter a Task to delete:  ")
