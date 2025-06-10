@@ -150,6 +150,8 @@ a = [1,2,3,4,5]
 bank_open= True
 bank_close= False
 
+user_ip = 0
+
 while bank_open:
     
 
@@ -162,11 +164,12 @@ while bank_open:
     5. Exit
     """)
     
-    user_ip = int(input("\nEnter your choice: "))
+    try:
+        user_ip = int(input("\nEnter your choice: "))
+    except ValueError:
     
-    
-    if user_ip not in a:
-        print(Fore.RED+Back.BLACK+"    Enter a valid Input    ")
+        if user_ip not in a :
+            print(Fore.RED+Back.BLACK+"    Enter a valid Input    ")
         
     if user_ip == 1:
         system("cls")
