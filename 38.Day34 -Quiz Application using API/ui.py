@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import * # type:ignore
 from quiz_brain import QuizBrain
 THEME_COLOR = "#375362"
 
