@@ -67,6 +67,30 @@ Throughout the bootcamp, I’ll be updating this repository with mini-projects a
 
 ---
 
+## 📘 Course Structure
+
+Since the [course](https://github.com/maazsiddiqui79) is frequently updated, the contents might not be exactly similar, but the overall structure is as follows:
+
+## 🧠 Tech Stack & Skills
+
+### 🐍 Python Development
+- Python 3 (Latest Version)
+- Python Scripting & Automation
+- Python Game Development (Turtle)
+- Web Scraping (Beautiful Soup, Requests)
+- Data Analysis (Pandas, NumPy)
+- Python GUI App Development (Tkinter)
+
+### 🌐 Web Development
+- HTML5
+- CSS3
+- Front-End Web Design
+- APIs Integration
+- Databases
+- Authentication & Security
+
+---
+
 ## 📌 Goals
 
 - Build discipline by coding daily.
