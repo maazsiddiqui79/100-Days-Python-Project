@@ -58,7 +58,12 @@ year.insert(0, 2007)
 year = year[::-1]  # Reverse year list to match movie order
 
 # Loop through the first 100 items and print with color
+x = []
 for i in range(100):
     print(Fore.GREEN + f"{movie[i]}" + Fore.MAGENTA + f" ({year[i]})")
-    
+    x.append(f"{movie[i]}  ({year[i]})")
 print(Fore.RED+f"+---------------------------------------------------END---------------------------------------------------+")
+with open("Top 100 Movie.txt","w",encoding="utf-8") as f:
+    for i in x:
+        f.write(str(i)+"\n")
+    
