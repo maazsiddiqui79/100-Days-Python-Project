@@ -178,17 +178,20 @@ def key_press(event):
 
 
 win = Tk()
-win.geometry("330x330")
+win.geometry("350x400")
 win.maxsize(width=400,height=400)
 win.title("C A L C U L A T O R")
 win.bind("<Key>", key_press)
 win.config(padx=15,pady=15,bg=bg_secondary)
 
 
+title_label = Label(win, text="C A L C U L A T O R", font=("Helvetica", 16, "bold"), bg=bg_secondary, fg="black")
+title_label.grid(column=0, row=0, columnspan=6, pady=(0, 10))
+
 ip =Entry(width=18,font=("Helvetica", 20,"bold"), justify="right",bg="#D6E3C8",fg="black")
 
 # ip.config(state="readonly")
-ip.grid(column=0,row=0,columnspan=6,pady=10)
+ip.grid(column=0,row=1,columnspan=6,pady=10)
 
 
     
