@@ -115,7 +115,7 @@ timer_text.grid(row=0,column=2)
 # display img ans count down
 canvas =Canvas(width=200,height=250,bg=PEBBLE_GREY_21,highlightthickness=0)
 canvas.grid(column=2,row=1)
-img = PhotoImage(file =r"M:\M..A..A..Z\New Learning\Project\100-Days-Python-Project\31.Day28 -Promodo(timer)\tomato.png")
+img = PhotoImage(file ="tomato.png")
 canvas.create_image(100,125,image=img)
 
 countdown_text = canvas.create_text(100,145,text="00:00",font=("Comic Sans MC",45,"bold"),fill="white")
