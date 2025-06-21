@@ -116,14 +116,6 @@ Since the [course](https://github.com/maazsiddiqui79) is frequently updated, the
   <img src="https://img.shields.io/badge/Web%20Design-4B4B4B?style=flat-square"/>  
 </p>
 
----
-![Stars](https://img.shields.io/github/stars/maazsiddiqui79/Get-Up?style=social)
-![Forks](https://img.shields.io/github/forks/maazsiddiqui79/Get-Up?style=social)
-![Issues](https://img.shields.io/github/issues/maazsiddiqui79/Get-Up)
-![Contributors](https://img.shields.io/github/contributors/maazsiddiqui79/Get-Up)
-
-
-
 
 ---
 
