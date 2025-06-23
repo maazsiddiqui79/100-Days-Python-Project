@@ -8,11 +8,11 @@ scr.title("India States Quiz")  # Updated title to match the map
 scr.setup(width=750, height=600)
 
 # Load and set the map image
-map_image = r"\M..A..A..Z\New Learning\Project\100-Days-Python-Project\28.Day25 - Country quiz game\blank_states_img.gif"
+map_image = "blank_states_img.gif"
 scr.addshape(map_image)
 turtle.shape(map_image)
 
-data = pd.read_csv(r"\M..A..A..Z\New Learning\Project\100-Days-Python-Project\28.Day25 - Country quiz game\50_states.csv")
+data = pd.read_csv("50_states.csv")
 all_states = [i.lower() for i in data["state"]]
     
 print(all_states) #

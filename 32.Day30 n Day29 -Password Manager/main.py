@@ -56,7 +56,7 @@ def password_gen():
     passwordlen =random.randint(8,16)
     password_list =random.choices(characters,k=passwordlen,weights=weights)
     actual_password = "".join(password_list)
-    
+    \
     
     password_entry.insert(0,actual_password)
     pyperclip.copy(actual_password) 
@@ -163,7 +163,7 @@ canvas =Canvas(width=200,height=200,bg=BACKGROUND,highlightthickness=0)
 canvas.grid(column=1,row=0)
 img =PhotoImage(file="logo.png")
 canvas.create_image(100,100,image=img)
-
+json
 # label and entry of website
 web_label=Label(text="Website :",font=("comic san ma",15,"bold"),bg=BACKGROUND)
 web_label.grid(column=0,row=1,pady=5)

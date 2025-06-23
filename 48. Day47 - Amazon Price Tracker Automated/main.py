@@ -49,10 +49,3 @@ if price <=3599:
             msg=message) 
 else:
     print("TO COSTLY")
-    message = f"Subject: Assalamualaikum\n\nTO COSTLY\nPrice:{price}\n\nURL: https://www.amazon.in/dp/B0CQRQLJSR/ref=sspa_dk_detail_4?psc=1&pf_rd_p=67d3dec9-3503-44a1-a945-e969d04cca69&pf_rd_r=6SHTP9F1HED7NVGX5JX5&pd_rd_wg=VZsTV&pd_rd_w=c5Jxi&content-id=amzn1.sym.67d3dec9-3503-44a1-a945-e969d04cca69&pd_rd_r=fe256561-c1b9-405d-8487-bcf51ce4bfaa&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM"
-    with smtplib.SMTP_SSL("smtp.gmail.com",port=465) as connection:
-        connection.login(user=my_mail,password=mail_password)
-        connection.sendmail(
-            from_addr=my_mail,
-            to_addrs=to_mail,
-            msg=message) 

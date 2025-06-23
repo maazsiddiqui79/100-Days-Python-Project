@@ -20,11 +20,11 @@ class QUIZ_INTERFACE:
         self.text =self.canvas.create_text(300,150,text="Questions Come Here",font=("arial",20,"italic"),width=600)
         
         
-        check_img = PhotoImage(file=r"M:\M..A..A..Z\New Learning\Daily Codes\34.Day34\quizzler-app-start\images\true.png")
+        check_img = PhotoImage(file=r"M:\M..A..A..Z\PROGRAMMING\1. PYTHON\Project\100-Days-Python-Project\38.Day34 -Quiz Application using API\images\true.png")
         self.check_btn = Button(image=check_img,relief="solid",command=self.ans_true)
         self.check_btn.grid(column=0,row=3)
         
-        cross_img = PhotoImage(file=r"M:\M..A..A..Z\New Learning\Daily Codes\34.Day34\quizzler-app-start\images\false.png")
+        cross_img = PhotoImage(file=r"M:\M..A..A..Z\PROGRAMMING\1. PYTHON\Project\100-Days-Python-Project\38.Day34 -Quiz Application using API\images\false.png")
         self.cross_btn = Button(image=cross_img,relief="solid",command=self.ans_false)
         self.cross_btn.grid(column=1,row=3)
         

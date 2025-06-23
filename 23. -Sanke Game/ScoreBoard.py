@@ -50,7 +50,7 @@ class Score_board_CLass (Turtle):
         if self.Score > High_Score:
             self.goto(0, 150)
             self.write(f"🎉new high score🎉".upper(), align='center', font=('Arial', 24, 'normal'))
-            with open(r"\M..A..A..Z\New Learning\Project\100-Days-Python-Project\23. -Sanke Game\High_Score.txt", "w") as f:
+            with open("23. -Sanke Game\Main.py", "w") as f:
                 f.write(str(self.Score))
                 
                 # self.clear()

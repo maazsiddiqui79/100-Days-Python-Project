@@ -3,12 +3,6 @@ import requests
 import pprint
 import spotipy
 
-# header={"USER-AGENT": " Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" }
-
-
-# ip = input("Enter a date [YYYY-MM-DD]: ")
-# BILLBOARD_URL = "https://www.billboard.com/charts/hot-100/"+ip 
-# response =requests.get(url=BILLBOARD_URL,headers=header)
 
 
 

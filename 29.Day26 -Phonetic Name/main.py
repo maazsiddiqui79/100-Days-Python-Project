@@ -4,7 +4,7 @@ import pandas
 # {new_key:new_value for (index, row) in df.iterrows()}
 
 
-data = pandas.read_csv(r"M:\M..A..A..Z\New Learning\Daily Codes\26. Day26\NATO-alphabet-start\nato_phonetic_alphabet.csv")
+data = pandas.read_csv("nato_phonetic_alphabet.csv")
 
 # print(data)
 

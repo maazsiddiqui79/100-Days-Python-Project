@@ -15,6 +15,7 @@ quiz = QuizBrain(question_bank)
 
 x= QUIZ_INTERFACE(quiz_brain=quiz)
 while quiz.still_has_questions():
+    
     quiz.next_question()
 
 print("You've completed the quiz")

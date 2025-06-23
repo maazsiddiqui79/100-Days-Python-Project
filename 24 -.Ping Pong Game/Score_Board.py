@@ -1,7 +1,7 @@
 from turtle import *
 
 
-class Class_Score_Boward (Turtle) :
+class Class_Score_Board (Turtle) :
     def __init__(self,x,y):
         super().__init__()
         self.score = 0
