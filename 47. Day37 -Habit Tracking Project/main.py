@@ -46,8 +46,8 @@ date = str(datetime.datetime.now().strftime("%Y%m%d"))
 print(date)
 
 pixel_prams = {
-    "date" : "20250420",
-    "quantity" : "45"
+    "date" : "20250418",
+    "quantity" : "57"
 }
 
 response = requests.post(url=singlepixel_endpoint, json=pixel_prams, headers=headers_params)
