@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My First Blog: A Quirky Journey Through Nature, Cats, and Cupcakes</h1></div>
+    </div>
+    {% for  i in post %}
+    <div class="content">
+        <div class="card">
+            <h2>{{i.title}}</h2>
+            <p class="text">{{i.subtitle}}</p>
+            <a href="{{url_for('get_blog',num=i.id)}}">Read</a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+</body>
+<footer>
+  <p class='footer_para'>
+    &lt;/&gt; Built by Maaz Siddiqui | Powered by Flask | © {{ current_year }}
+    <br>
+    <a href="https://github.com/maazsiddiqui79" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/siddiqui-maazzz/" target="_blank">LinkedIn</a>
+  </p>
+  <a href="{{url_for('home')}}" class="back-to-top">⬆</a>
+</footer>
+</html>
