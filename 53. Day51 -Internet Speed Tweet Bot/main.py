@@ -69,7 +69,7 @@ username_input.send_keys(Keys.RETURN)
 time.sleep(3)
 # Enter password
 password_input = driver.find_element(By.NAME, "password")
-password_input.send_keys("you password")
+password_input.send_keys("maaz1234567890MAAZ")
 password_input.send_keys(Keys.RETURN)
 time.sleep(3)
 

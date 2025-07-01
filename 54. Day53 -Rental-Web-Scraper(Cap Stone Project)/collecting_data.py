@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 
+
 class Rental_Web_Scraper ():
     def __init__(self,folder_path):
         self.folder_path = folder_path
@@ -104,6 +105,6 @@ class Rental_Web_Scraper ():
         
         
         
-d = Rental_Web_Scraper("database")  
+
 
     
