@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Submission</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Body Flexbox Centering */
+      h1 {
+        font-weight: 800;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f8f9fa;
+      }
+
+      /* Dialog Box Styling */
+      .dialog-box {
+        background-color: lightgray;
+        width: 100%;
+        max-width: 700px; /* reduced width */
+        padding: 1rem; /* reduced padding */
+        margin-top: 5rem; /* reduced margin */
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      /* Responsive Image Limit */
+      img {
+        max-width: 300px; /* reduced image size */
+        height: auto;
+        padding: 0.5rem; /* reduced padding */
+        border-radius: 20px; /* reduced radius */
+      }
+
+      /* Smaller font for text content */
+      .dialog-box h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .dialog-box .lead {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dialog-box">
+      <h1>All Set, Stay Tuned</h1>
+      <div class="row flex-lg-row-reverse align-items-center g-3 py-3">
+        <div class="col-12 col-sm-8 col-lg-6">
+          <img
+            src="static/assets/img/form_submitted.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Form Submitted"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6 text-start">
+          <h1 class="fw-bold lh-1 mb-3">Form Submission Successful</h1>
+          <p class="lead">
+            Your form has been successfully submitted and is now under review.
+            We appreciate your time and effort in providing the necessary
+            information. Our team will carefully evaluate your submission, and
+            if any additional details are required, we will reach out to you
+            through the contact information provided.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="{{url_for('main_server_page')}}">
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm px-3"
+              >
+                Home
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
