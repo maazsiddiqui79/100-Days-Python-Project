@@ -89,7 +89,7 @@ random_wrd = random.choice(wrd)
 # Display underscores representing the unknown word
 print("Guess the Word:", len(random_wrd) * "_ ")
 
-# print(random_wrd)  # Debugging purpose; remove this line in final version
+# print(random_wrd)  # Debugging purpose;
 
 # Game status variables
 game_over = False  # Flag to indicate if the game is over

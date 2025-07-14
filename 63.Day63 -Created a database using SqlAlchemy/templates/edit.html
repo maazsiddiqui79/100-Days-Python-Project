@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+     <style>
+        body{
+            margin: 2rem;
+        }
+    </style>
+</head>
+<body>
+     <form action="{{ url_for('edit', id=id) }}" method="POST">
+      <h1>Book Name: {{u_book}}</h1>
+      <h2>Current Rating {{u_author}}</h2>
+      <input name="rating" type="text" placeholder="New Rating" />
+      <button type="submit" class="btn btn-secondary btn-dark">Change Rating</button>
+    </form>
+    
+</body>
+</html>

@@ -55,9 +55,7 @@ def password_gen():
     password_entry.delete(0,END)
     passwordlen =random.randint(8,16)
     password_list =random.choices(characters,k=passwordlen,weights=weights)
-    actual_password = "".join(password_list)
-    \
-    
+    actual_password = "".join(password_list)    
     password_entry.insert(0,actual_password)
     pyperclip.copy(actual_password) 
 

@@ -39,6 +39,23 @@ stop_time = time() + wait_time
 
 while True:
     cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
+    cookie.click()
     
     
     if time() >stop_time:
@@ -67,13 +84,7 @@ while True:
                     best2.click()
             else:                
                 if best:
-                    best.click()
-                    best.click()
-                    best.click()
-                    best.click()
-                    best.click()
-                    best.click()
-                    best.click()
+                   
                     best.click()
                 # print(f"Bought item: {best.get_attribute('id')}")
         except:

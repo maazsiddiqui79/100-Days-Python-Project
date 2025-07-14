@@ -3,12 +3,14 @@ from twilio.rest import Client
 import os
 
 
-API_KEY = os.environ.get("OWM_Endpoint_Key")
+API_KEY = '5c4f3c0cf70da6f00c21892a789afbc5'
 OWM_Endpoint = "http://api.openweathermap.org/data/2.5/forecast"
 
 
-account_SID = os.environ.get("day_35_accSID")
-Auth_Token = os.environ.get("Auth_Token_Day35")
+
+
+account_SID = 'ACc15ec90986a12f96d29d03cc50b47cb3'
+Auth_Token = '[AuthToken]'
 
 
 
@@ -25,6 +27,7 @@ response.raise_for_status()
 
 print(response)
 Weather_data = response.json()
+print(Weather_data)
 
 will_rain = False
 

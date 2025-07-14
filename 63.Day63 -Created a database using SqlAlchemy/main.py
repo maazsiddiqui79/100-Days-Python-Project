@@ -1,102 +1,100 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import Integer, String, Float
+from flask import Flask , redirect , url_for , render_template  , request
+from flask_sqlalchemy import SQLAlchemy 
+from sqlalchemy import String , Float 
+from flask_wtf import FlaskForm 
+from wtforms import StringField , SubmitField
+from wtforms.validators import DataRequired
 
-'''
-Red underlines? Install the required packages first: 
-Open the Terminal in PyCharm (bottom left). 
-
-On Windows type:
-python -m pip install -r requirements.txt
-
-On MacOS type:
-pip3 install -r requirements.txt
-
-This will install the packages from requirements.txt for this project.
-'''
-
-app = Flask(__name__)
-
-# CREATE DATABASE
+class myform(FlaskForm):
+    book_name_ip = StringField('Book Name:',validators=[DataRequired()])
+    book_author_ip = StringField('Book Author:',validators=[DataRequired()])
+    book_rating_ip = StringField('Book Author:',validators=[DataRequired()])
+    submit_btn = SubmitField('submit')
 
 
-class Base(DeclarativeBase):
-    pass
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///books.db"
-# Create the extension
-db = SQLAlchemy(model_class=Base)
-# initialise the app with the extension
-db.init_app(app)
+app =Flask(__name__)
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.secret_key = 'My-Very-Very-Top-Ultra-Secrect-Key'
 
-# CREATE TABLE
-class Book(db.Model):
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    title: Mapped[str] = mapped_column(
-        String(250), unique=True, nullable=False)
-    author: Mapped[str] = mapped_column(String(250), nullable=False)
-    rating: Mapped[float] = mapped_column(Float, nullable=False)
+my_sql = SQLAlchemy(app=app)
 
-
-# Create table schema in the database. Requires application context.
-with app.app_context():
-    db.create_all()
-
-
+class MY_DATA(my_sql.Model):
+   
+    id = my_sql.Column(my_sql.Integer,primary_key=True)
+    book_name = my_sql.Column(my_sql.String,nullable=False)
+    book_author = my_sql.Column(my_sql.String,nullable=False)
+    book_rating= my_sql.Column(my_sql.String,nullable=False)
+    
+    
+    def __repr__(self):
+         return (f"<MY_DATA id={self.id} "
+                f"name='{self.book_name}' "
+                f"author='{self.book_author}' "
+                f"rating={self.book_rating}>")
+    
+    
+    
+    
 @app.route('/')
 def home():
-    # READ ALL RECORDS
-    # Construct a query to select from the database. Returns the rows in the database
-    result = db.session.execute(db.select(Book).order_by(Book.title))
-    # Use .scalars() to get the elements rather than entire rows from the database
-    all_books = result.scalars().all()
-    return render_template("index.html", books=all_books)
+    all_books = MY_DATA.query.all()
+    return render_template('home.html',all_books=all_books)
 
 
-@app.route("/add", methods=["GET", "POST"])
-def add():
-    if request.method == "POST":
-        # CREATE RECORD
-        new_book = Book(
-            title=request.form["title"],
-            author=request.form["author"],
-            rating=request.form["rating"]
-        )
-        db.session.add(new_book)
-        db.session.commit()
+@app.route('/add_new_book',methods=['GET','POST'])
+def add_new_book():
+    form = myform()
+    
+    if form.validate_on_submit():
+        name = form.book_name_ip.data
+        author = form.book_author_ip.data
+        rating = form.book_rating_ip.data
+        
+        
+        add_new_entry = MY_DATA(book_name=name,book_author=author,book_rating=rating)
+        my_sql.session.add(add_new_entry)
+        my_sql.session.commit()
         return redirect(url_for('home'))
-    return render_template("add.html")
+    
+    return render_template('add.html',form=form)
 
-
-@app.route("/edit", methods=["GET", "POST"])
-def edit():
-    if request.method == "POST":
-        # UPDATE RECORD
-        book_id = request.form["id"]
-        book_to_update = db.get_or_404(Book, book_id)
-        book_to_update.rating = request.form["rating"]
-        db.session.commit()
+@app.route('/delete/<int:id>',methods=['GET','POST'])
+def delete(id):
+    user_del = my_sql.session.query(MY_DATA).filter_by(id=id).first()
+    
+    if user_del:
+        my_sql.session.delete(user_del)
+        my_sql.session.commit()
+    
+    return redirect('/')
+    
+   
+    
+@app.route('/edit/<int:id>',methods=['GET','POST'])
+def edit(id):
+    user_edit = my_sql.session.query(MY_DATA).filter_by(id=id).first()
+    user_choice_book = user_edit.book_name
+    user_choice_author = user_edit.book_author
+    
+    
+       
+    if request.method == 'POST':
+        new_rating = request.form['rating']
+        user_edit.book_rating = new_rating
+        my_sql.session.commit()
         return redirect(url_for('home'))
-    book_id = request.args.get('id')
-    book_selected = db.get_or_404(Book, book_id)
-    return render_template("edit_rating.html", book=book_selected)
+    
+    return render_template('edit.html',u_book=user_choice_book,u_author=user_choice_author,id=id) 
+    
+    
+with app.app_context():
+    my_sql.create_all()
+    
 
 
-@app.route("/delete")
-def delete():
-    book_id = request.args.get('id')
-
-    # DELETE A RECORD BY ID
-    book_to_delete = db.get_or_404(Book, book_id)
-    # Alternative way to select the book to delete.
-    # book_to_delete = db.session.execute(db.select(Book).where(Book.id == book_id)).scalar()
-    db.session.delete(book_to_delete)
-    db.session.commit()
-    return redirect(url_for('home'))
-
-
-if __name__ == "__main__":
+if __name__ =='__main__':
     app.run(debug=True)

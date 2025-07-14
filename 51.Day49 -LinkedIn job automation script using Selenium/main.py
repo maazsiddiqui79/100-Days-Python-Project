@@ -7,6 +7,7 @@ import time
 
 ip = input("Enter job role:")
 USERNAME = "maaz.irshad.siddiqui@gmail.com"
+# add password before executing
 PASSWORD = ""
 
 

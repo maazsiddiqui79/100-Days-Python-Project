@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Add Book</title>
-  </head>
-  <body>
-    <form action="{{ url_for('add') }}" method="POST">
-      <label>Book Name</label>
-      <input name="title" type="text" />
-      <label>Book Author</label>
-      <input name="author" type="text" />
-      <label>Rating</label>
-      <input name="rating" type="text" />
-      <button type="submit">Add Book</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head>
+<body>
+
+    <form action="/add_new_book" method="post">
+        {{form.csrf_token}}
+
+        <p>
+            {{form.book_name_ip.label}}
+            {{form.book_name_ip}}
+        </p>
+        
+
+        <p>
+            {{form.book_author_ip.label}}
+            {{form.book_author_ip}}
+        </p>
+        
+
+        <p>
+            {{form.book_rating_ip.label}}
+            {{form.book_rating_ip}}
+        </p>
+        {{form.submit_btn}}
+
     </form>
-  </body>
+    
+</body>
 </html>
