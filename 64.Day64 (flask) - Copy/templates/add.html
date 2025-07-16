@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block title %}Add Movie{% endblock %} {% block
+content %}
+<div class="content">
+  <h1 class="heading">Add a Movie</h1>
+
+  <form action="/add" method="post">
+    {{movie_form.csrf_token }}
+    <p>
+      <strong> {{movie_form.movie_name.label}} </strong> <br />
+      {{movie_form.movie_name}}
+    </p>
+    {{movie_form.add_btn}}
+  </form>
+  <br>
+
+</div>
+{% if movie_title %}
+<ul>
+    {% for i in movie_title %}
+    <li>
+        <strong><a href="/add_new_movie/{{i.id}}">{{i.title}}</a></strong>
+    </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}
+
+
