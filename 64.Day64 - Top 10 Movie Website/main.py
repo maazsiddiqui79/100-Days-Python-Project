@@ -21,13 +21,13 @@ This will install the packages from requirements.txt for this project.
 '''
 
 class edit_form(FlaskForm):
-    rating = FloatField('Your Rating out of 10 eg:7.5',validators=[DataRequired()])
-    review = StringField('Your Review',validators=[DataRequired()])
+    rating = FloatField('Your Rating out of 10 eg:7.5',validators=[DataRequired()],render_kw={"autocomplete": "off"})
+    review = StringField('Your Review')
     done_btn = SubmitField('Done')
 
 
 class add_form(FlaskForm):
-    movie_name = StringField('Movie',validators=[DataRequired()])
+    movie_name = StringField('Movie',validators=[DataRequired()],render_kw={"autocomplete": "off"})
     add_btn = SubmitField('Add Movie')
 
 
@@ -63,15 +63,11 @@ class MOVIE(db.Model):
 @app.route("/")
 def home():
     movies = MOVIE.query.order_by(MOVIE.rating.desc()).all()
-    all_movie = MOVIE.query.all()
     
     
     return render_template("index.html",all_movie=movies)
 
 
-
-
-# data = {}
 title_lst = []
 @app.route("/add" , methods=['GET','POST'])
 def add():
@@ -92,7 +88,6 @@ def add():
         
 
         response = requests.get(url, headers=headers,params=params)
-        print(response)
         data =response.json()
         
         
