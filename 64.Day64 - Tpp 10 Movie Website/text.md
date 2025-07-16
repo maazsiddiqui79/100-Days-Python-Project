@@ -1,5 +1,3 @@
-
-
 ## 📽️ Top 10 Movie Website
 
 A clean and responsive web application that showcases the top 10 movies with posters, brief details, and modals for extended information. Built using HTML, CSS, JavaScript, and Bootstrap.
@@ -57,18 +55,14 @@ Top10Movies/
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/yourusername/top10movies.git
+   git clone https://github.com/maazsiddiqui79/100-Days-Python-Project/tree/main/64.Day64%20-%20Tpp%2010%20Movie%20Website
    ```
 
 2. **Navigate into the project directory**
 
    ```bash
-   cd top10movies
+   cd 64.Day64 - Tpp 10 Movie Website
    ```
-
-3. **Open in browser**
-
-   - Simply open `index.html` in your preferred browser
 
 ---
 
@@ -77,7 +71,6 @@ Top10Movies/
 You can deploy the project using:
 
 - **GitHub Pages**
-- **Netlify**
 - **Vercel**
 
 ---
@@ -86,20 +79,6 @@ You can deploy the project using:
 
 **Maaz Siddiqui**
 _Diploma in Computer Engineering | Passionate about Web Development and AI_
-GitHub: [github.com/yourusername](https://github.com/yourusername)
+GitHub: [github.com/maazsiddiqui79](https://github.com/maazsiddiqui79)
 
 ---
-
-### 📜 License
-
-This project is open-source and free to use under the [MIT License](LICENSE).
-
----
-
-Let me know if you’d like:
-
-- A dark theme version
-- SEO meta tags added
-- Movie data fetched from an API (like TMDb or OMDb)
-
-I can help you integrate those next.
