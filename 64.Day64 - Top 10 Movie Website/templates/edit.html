@@ -1,23 +1,31 @@
 {% extends 'base.html' %} 
 <head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"></head>
-{% block title %}Edit Movies{% endblock %} {% block content %}
+{% block title %}Edit Movies{% endblock %} 
+{% block content %}
 <div class="content">
   <h1 class="heading">Movie Title</h1>
   <p class="description">Edit Movie Rating</p>
-
+  <img src="{{bg}}" alt="maaz" width="300" height="390" style="border: 1px solid black;
+   border-radius: 7px;
+    margin: 20px;
+    opacity:0.9 ;
+    margin-top:0px;">
   <form action="{{url_for('edit',id=movie.id)}}" method="post">
-    {{ form.csrf_token }}
-    <p>
-      <strong>{{form.rating.label}}</strong> <br>
-    {{form.rating}}<br>
-    </p>
+  {{ form.csrf_token }}
+  <p>
+    <strong>{{form.rating.label}}</strong> <br>
+  {{form.rating}}<br>
+  </p>
 
-    <p>
-      <strong> {{form.review.label}} </strong> <br>
-      {{form.review}}<br>
-    </p>
-    {{form.done_btn}}
+  <p>
+    <strong> {{form.review.label}} </strong> <br>
+    {{form.review}}<br>
+  </p>
+  {{form.done_btn}}
 
-  </form>
+</form>
+
+
+
 </div>
 {% endblock %}

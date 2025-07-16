@@ -71,6 +71,7 @@ def home():
 title_lst = []
 @app.route("/add" , methods=['GET','POST'])
 def add():
+    error = None
     add_new_movie_form = add_form()
     if add_new_movie_form.validate_on_submit():
         api_key = '581eed00793c64dcb3ffb6d5c0c08c06'
@@ -85,26 +86,24 @@ def add():
             'api_key':api_key,
             'query': add_new_movie_form.movie_name.data
         }
-        
+        try:
 
-        response = requests.get(url, headers=headers,params=params)
-        data =response.json()
-        
-        
-        
-        title_lst.clear()
-        for i in range(len(data['results'])):
-            title_lst.append({'id':data['results'][i]['id'],
-                              'title':data['results'][i]['title'],
-                              'img_url':data['results'][i]['poster_path'],
-                              'year':data['results'][i]['release_date'],
-                              'desc':data['results'][i]['overview'],
-                              })
-
-        
-        
-    
-    return render_template('add.html',movie_form=add_new_movie_form,movie_title=title_lst)
+            response = requests.get(url, headers=headers,params=params)
+            data =response.json()
+            
+            
+            
+            title_lst.clear()
+            for i in range(len(data['results'])):
+                title_lst.append({'id':data['results'][i]['id'],
+                                'title':data['results'][i]['title'],
+                                'img_url':data['results'][i]['poster_path'],
+                                'year':data['results'][i]['release_date'],
+                                'desc':data['results'][i]['overview'],
+                                })
+        except Exception as e:
+            error = f'TOO MANY REQUESTS ERROR:{e}' 
+    return render_template('add.html',movie_form=add_new_movie_form,movie_title=title_lst,error=error)
 
 
 @app.route("/add_new_movie/<int:id>", methods=['GET', 'POST'])
@@ -162,16 +161,16 @@ def delete(id):
 def edit(id):
     movie = MOVIE.query.get_or_404(id)
     form = edit_form()  # Populate form with existing data
-    # form = edit_form(obj=movie)  # Populate form with existing data
+    bg_img = movie.img_url
 
     if form.validate_on_submit():
         movie.rating = form.rating.data
         movie.review = form.review.data
         db.session.commit()
         return redirect(url_for("home")) 
-    bg = movie.img_url   
     
-    return render_template('edit.html',form=form,movie=movie,bg=bg)
+    
+    return render_template('edit.html',form=form,movie=movie,bg=bg_img)
 
 with app.app_context():
     db.create_all()
