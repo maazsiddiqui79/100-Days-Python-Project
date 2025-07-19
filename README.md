@@ -109,7 +109,7 @@ Since the [course](https://github.com/maazsiddiqui79) is frequently updated, the
 ### 🌐 Web Development
 <p align="left">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>  
-  <img src="[https://img.shields.io/badge/CSS3-1572B6?style=flat-square](https://www.google.com/imgres?q=css%20logo&imgurl=https%3A%2F%2Fe1.pngegg.com%2Fpngimages%2F326%2F868%2Fpng-clipart-css3-badge-blue-and-white-css-icon-thumbnail.png&imgrefurl=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3DCss3&docid=fqOJK8u6L54SrM&tbnid=UM9abZ144yh18M&vet=12ahUKEwilu-ntwcmOAxUQdvUHHaF5IW4QM3oFCIcBEAA..i&w=348&h=348&hcb=2&ved=2ahUKEwilu-ntwcmOAxUQdvUHHaF5IW4QM3oFCIcBEAA)&logo=css3&logoColor=white"/>  
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>  
   <img src="https://img.shields.io/badge/API-4B4B4B?style=flat-square"/>  
   <img src="https://img.shields.io/badge/Databases-4B4B4B?style=flat-square"/>  
   <img src="https://img.shields.io/badge/Authentication-4B4B4B?style=flat-square"/>  
