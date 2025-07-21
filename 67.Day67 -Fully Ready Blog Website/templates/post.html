@@ -17,6 +17,7 @@
             <a href="#">{{ post.author }}</a>
             on {{ post.date }}
           </span>
+          ebc
         </div>
       </div>
     </div>
@@ -32,12 +33,10 @@
 
         <div class="d-flex justify-content-end mb-4">
           <!-- TODO: Editing posts-->
-          {% if ebc == 'True' %}
 
           <a class="btn btn-primary float-right" href="/edit-post/{{post.id}}"
             >Edit Post</a
           >
-          {% endif %}
         </div>
       </div>
     </div>

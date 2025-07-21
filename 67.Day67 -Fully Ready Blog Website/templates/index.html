@@ -1,5 +1,4 @@
 {% include "header.html" %}
-
 <!-- Page Header-->
 <header
   class="masthead"
@@ -23,7 +22,7 @@
       <!-- Post preview-->
       {% for post in all_posts %}
       <div class="post-preview">
-        <a href="{{ url_for('show_post', post_id=post.id , ebc=ebc) }}">
+        <a href="{{ url_for('show_post', post_id=post.id) }}">
           <h2 class="post-title">{{ post.title }}</h2>
           <h3 class="post-subtitle">{{ post.subtitle }}</h3>
         </a>
@@ -32,9 +31,7 @@
           Posted by
           <a href="#">{{post.author}}</a>
           on {{post.date}}
-          {% if request.url.endswith('/admin-maaz') %}
           <a href="/delete-post/{{post.id}}">❌</a>
-          {% endif %}
         </p>
       </div>
       <!-- Divider-->
@@ -42,7 +39,6 @@
       {% endfor %}
 
       <!-- New Post -->
-       {% if request.url.endswith('/admin-maaz') %}
 
       <div class="d-flex justify-content-end mb-4">
         <!-- TODO: Adding new posts -->
@@ -52,7 +48,6 @@
           >Create New Post</a
         >
       </div>
-      {% endif %}
 
       <!-- Pager-->
       <!-- <div class="d-flex justify-content-end mb-4">

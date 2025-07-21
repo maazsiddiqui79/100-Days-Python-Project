@@ -55,31 +55,22 @@ with app.app_context():
     db.create_all()
 
 
-@app.route('/admin-maaz')
-def admin_panel():
-    # Query the database for all the posts. Convert the data to a python list.
-    result = BlogPost.query.all()
-    edit_btn_condition = 'True'
-    print(result)
-    return render_template("index.html", all_posts=result,ebc=edit_btn_condition)
-
-
-
 @app.route('/')
 def get_all_posts():
     # Query the database for all the posts. Convert the data to a python list.
     result = BlogPost.query.all()
-    edit_btn_condition = 'False'
+    edit_btn_condition = 'True'
     print(result)
-    return render_template("index.html", all_posts=result,ebc=edit_btn_condition)
+    return render_template("index.html", all_posts=result) 
+
 
 # TODO: Add a route so that you can click on individual posts.
-@app.route('/post/<int:post_id>/<ebc>')
-def show_post(post_id,ebc):
+@app.route('/post/<int:post_id>')
+def show_post(post_id):
     # TODO: Retrieve a BlogPost from the database based on the post_id
     
     requested_post = BlogPost.query.filter_by(id=post_id).first()
-    return render_template("post.html", post=requested_post,ebc=ebc)
+    return render_template("post.html", post=requested_post)
 
 
 # TODO: add_new_post() to create a new blog post
