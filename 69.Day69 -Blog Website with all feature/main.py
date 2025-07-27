@@ -3,8 +3,8 @@ from datetime import date
 from flask import Flask, abort, render_template, redirect, url_for, flash , request
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
-from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user , login_required
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user , login_required
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm
@@ -54,14 +54,14 @@ class Users_DATABASE(db.Model,UserMixin):
     email = db.Column(db.String(250), unique=True, nullable=False)
     password = db.Column(db.String(250), nullable=False)
 
-# User loader callback for Flask-Login
+# User loader callback for Flask-Login 
 @login_manger.user_loader
 def load_user(user_id):
     return Users_DATABASE.query.get(int(user_id))
 
 # Custom decorator to allow access to admin only
 def admin_only(f):
-    @wraps(f)
+    @wraps(f) 
     def decorated_function(*args, **kwargs):
         if current_user.email != 'siddiqui.maaz79@gmail.com':
             return abort(403)
