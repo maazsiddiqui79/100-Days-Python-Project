@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .inline-light:hover {
+            display: inline-block;
+            background-color: #f8f9fa;
+            /* Light background */
+            color: #000;
+
+        }
+
+       .ip {
+    border: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.boxx{
+    padding: 14px;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img class="d-block mx-auto mb-4" src="{{url_for('static',filename='morse-code.png')}}" alt=""
+                    width="39" height="37"></a>
+            <h1 class="d-block mx-auto mb-4">Text To Morse-code</h1>
+            <ul class="nav nav-pills">
+                <li><a class="btn btn-dark " href="{{url_for('morse_to_text')}}" class="nav-link">Text &larr;
+                        Morse-code</a></li>
+                <li><a class="btn btn-outline-dark ms-3" href="/">Home</a></li>
+
+            </ul>
+        </header>
+    </div>
+
+
+    <div class="d-grid gap-3" style="grid-template-columns: 2fr 2fr;">
+        <div class="bg-body-white border rounded-3 " style="box-shadow: 3px 4px 22px rgba(0, 0, 1, 0.3);">
+            <form action="{{url_for('text_to_morse')}}" method="post" class="boxx">
+                <h3>Text</h3>
+                <hr>
+
+                <textarea class="ip" name="plaintext" id="" style="resize: none;" cols="83" rows="10"
+                    placeholder="Enter your Plain Text"></textarea>
+
+                <input type="submit" value="Convert" class="btn btn-dark inline-light">
+
+            </form>
+        </div>
+        <div class="bg-body-white border rounded-3" style="box-shadow: 3px 4px 22px rgba(0, 0, 1, 0.3);">
+
+            <div class="boxx">
+
+                <h3>Morse-Code Translation</h3>
+                <hr>
+                <p id="morseText">{{morse_text}}</p>
+                {% if morse_text %}
+                
+                <button class="btn btn-sm btn-outline-secondary" onclick="copyText()">Copy</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-4 mt-5 border-top">
+    <div class="col-md-6 d-flex align-items-center">
+      <img src="{{ url_for('static', filename='morse-code.png') }}" alt="Logo" width="39" height="37"
+        class="me-2" />
+      <span class="text-body-secondary">© 2025 Morse Code Translator | Built by <em>Maaz Siddiqui</em></span>
+    </div>
+    <div class="col-md-6 text-end">
+      <a class="text-decoration-none me-3" href="https://www.linkedin.com/in/siddiqui-maazzz/">LinkedIn</a>
+      <a class="text-decoration-none me-3" href="https://github.com/maazsiddiqui79">GitHub</a>
+      <a class="text-decoration-none" href="tel:+918850281310">+91 88502 81310</a>
+    </div>
+  </footer>
+<script>
+  function copyText() {
+    const text = document.getElementById("morseText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Morse code copied to clipboard!");
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  }
+</script>
+
+
+</html>
