@@ -10,7 +10,7 @@ Welcome! I'm **Mark Siddiqui**, a Python developer currently on a journey to mas
 - 🧠 **Instructor:** Dr. Angela Yu
 - 💻 **Language:** Python 3
 - ⏳ **Duration:** 100 Days
-- 🗓️ **Status:** In Progress ✅
+- 🗓️ **Status:** Compeleted ✅
 
 ---
 
@@ -132,6 +132,7 @@ Since the [course](https://github.com/maazsiddiqui79) is frequently updated, the
 
 - 📧 Email: siddiqui.maaz79@gmail.com
 - 🌐 GitHub: [https://github.com/marksiddiqui](https://github.com/maazsiddiqui79)
+- 💻 Portfolio: [the-maaz-portfolio.com](https://the-maaz-portfolio.onrender.com)
 
 
 ---
