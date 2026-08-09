@@ -131,7 +131,7 @@ Since the [course](https://github.com/maazsiddiqui79) is frequently updated, the
 ## 🙌 Let's Connect
 
 - 📧 Email: siddiqui.maaz79@gmail.com
-- 🌐 GitHub: [https://github.com/marksiddiqui](https://github.com/maazsiddiqui79)
+- 🌐 GitHub: [https://github.com/marksiddiqui](https://www.themaaz.online/)
 - 💻 Portfolio: [the-maaz-portfolio.com](https://the-maaz-portfolio.onrender.com)
 
 
