@@ -11,14 +11,16 @@
   
   <title>{% block title %}Default Title{% endblock %}</title>
 
+  {% block style %}
   <style>
-    {% block styling %}
+    
     /* Optional inline styling block */
     body {
       background-color: #6c757d;
     }
-    {% endblock %}
+    
   </style>
+  {% endblock %}
 </head>
 <body>
   {% block content %}{% endblock %}

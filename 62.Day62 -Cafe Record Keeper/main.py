@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from flask_bootstrap import Bootstrap5
+from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField ,SelectField
 from wtforms.validators import DataRequired,ValidationError
@@ -8,7 +8,7 @@ import csv
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-Bootstrap = Bootstrap5(app)
+Bootstrap = Bootstrap(app)
 
 def map_link(form, field):
     if 'https://' not in field.data or '/maps' not in field.data:
