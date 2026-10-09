@@ -100,14 +100,20 @@ def comp():
     print("Your Score: ", score)
     print("Computer Score: ", c_score)
 
-# Game mode selection
-game_ip = int(input("1. Multiplayer 🎮\t2. Single player 💻\t3. Exit 👋 :\t"))
-if game_ip == 1:
-    player1_name = input("Enter Player 1 Name: 🎭")
-    player2_name = input("Enter Player 2 Name: 🎭")
+
 
 # Game loop
 while True:
+    if p1_scr != 0 or p2_scr != 0 or c_score !=0 or score != 0:
+        pass
+    else:
+        # Game mode selection
+        game_ip = int(input("1. Multiplayer 🎮\t2. Single player 💻\t3. Exit 👋 :\t"))
+        if game_ip == 1:
+            player1_name = input("Enter Player 1 Name: 🎭")
+            player2_name = input("Enter Player 2 Name: 🎭")
+    
+     
     if game_ip == 1:
         # Multiplayer mode logic
         
@@ -162,11 +168,11 @@ while True:
         if user_ip1 == user_ip2:
             print("🤝 DRAW 🤝")
         elif (user_ip1 == 1 and user_ip2 == 3) or (user_ip1 == 2 and user_ip2 == 1) or (user_ip1 == 3 and user_ip2 == 2):
-            print(f"{player1_name} Wins 🏆")
+            print(f"--===={player1_name} Wins 🏆====--")
             p1_scr += 2
             p2_scr -= 1
         else:
-            print(f"{player2_name} Wins 🏆")
+            print(f"--===={player2_name} Wins 🏆====--")
             p1_scr -= 1
             p2_scr += 2
         
@@ -181,4 +187,4 @@ while True:
         break
     else:
         print("Invalid input ❌")
-        continue
+        pass

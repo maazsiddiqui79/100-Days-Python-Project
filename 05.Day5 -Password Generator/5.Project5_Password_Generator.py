@@ -38,7 +38,7 @@ else:
 
 print(pas)
 print("\nPassword:")
-for i in range(size+1):
+for i in range(size):
     print(random.choice(pas),end="")
 
 
